@@ -1,0 +1,193 @@
+<div id="accordionGroup" class="accordion">
+  <h3>
+    <button
+      type="button"
+      aria-expanded="true"
+      class="accordion-trigger"
+      aria-controls="sect1"
+      id="accordion1id"
+    >
+      <!-- aria-expanded="true" → indica que el panel controlado está expandido (visible). -->
+      <!-- aria-controls="sect1" → asocia el botón con el panel que controla. -->
+      <!-- id="accordion1id" → se usa para enlazar con aria-labelledby. -->
+
+      <span class="accordion-title">
+        Personal Information
+        <span class="accordion-icon"></span>
+      </span>
+    </button>
+  </h3>
+
+  <div
+    id="sect1"
+    role="region"
+    aria-labelledby="accordion1id"
+    class="accordion-panel"
+  >
+    <!-- role="region" → define una región significativa dentro de la página. -->
+    <!-- aria-labelledby="accordion1id" → vincula la región con el elemento que le da el título. -->
+
+    <div>
+      <fieldset>
+        <p>
+          <label for="cufc1">Name<span aria-hidden="true">*</span>:</label>
+          <!-- aria-hidden="true" → oculta el asterisco de los lectores de pantalla. -->
+
+          <input
+            type="text"
+            value=""
+            name="Name"
+            id="cufc1"
+            class="required"
+            aria-required="true"
+          />
+          <!-- aria-required="true" → indica que el campo es obligatorio. -->
+        </p>
+
+        <p>
+          <label for="cufc2">Email<span aria-hidden="true">*</span>:</label>
+          <!-- aria-hidden="true" → oculta el asterisco de los lectores de pantalla. -->
+
+          <input
+            type="text"
+            value=""
+            name="Email"
+            id="cufc2"
+            aria-required="true"
+          />
+          <!-- aria-required="true" → indica que el campo es obligatorio. -->
+        </p>
+
+        <p>
+          <label for="cufc3">Phone:</label>
+          <input type="text" value="" name="Phone" id="cufc3" />
+        </p>
+
+        <p>
+          <label for="cufc4">Extension:</label>
+          <input type="text" value="" name="Ext" id="cufc4" />
+        </p>
+
+        <p>
+          <label for="cufc5">Country:</label>
+          <input type="text" value="" name="Country" id="cufc5" />
+        </p>
+
+        <p>
+          <label for="cufc6">City/Province:</label>
+          <input type="text" value="" name="City_Province" id="cufc6" />
+        </p>
+      </fieldset>
+    </div>
+  </div>
+
+  <h3>
+    <button
+      type="button"
+      aria-expanded="false"
+      class="accordion-trigger"
+      aria-controls="sect2"
+      id="accordion2id"
+    >
+      <!-- aria-expanded="false" → indica que el panel controlado está colapsado (oculto). -->
+      <!-- aria-controls="sect2" → asocia el botón con el segundo panel. -->
+      <!-- id="accordion2id" → se usa para enlazar con aria-labelledby. -->
+
+      <span class="accordion-title">
+        Billing Address
+        <span class="accordion-icon"></span>
+      </span>
+    </button>
+  </h3>
+
+  <div
+    id="sect2"
+    role="region"
+    aria-labelledby="accordion2id"
+    class="accordion-panel"
+    hidden=""
+  >
+    <!-- role="region" → identifica la segunda sección importante del acordeón. -->
+    <!-- aria-labelledby="accordion2id" → vincula el panel con su botón. -->
+
+    <div>
+      <fieldset>
+        <p>
+          <label for="b-add1">Address 1:</label>
+          <input type="text" name="b-add1" id="b-add1" />
+        </p>
+        <p>
+          <label for="b-add2">Address 2:</label>
+          <input type="text" name="b-add2" id="b-add2" />
+        </p>
+        <p>
+          <label for="b-city">City:</label>
+          <input type="text" name="b-city" id="b-city" />
+        </p>
+        <p>
+          <label for="b-state">State:</label>
+          <input type="text" name="b-state" id="b-state" />
+        </p>
+        <p>
+          <label for="b-zip">Zip Code:</label>
+          <input type="text" name="b-zip" id="b-zip" />
+        </p>
+      </fieldset>
+    </div>
+  </div>
+
+  <h3>
+    <button
+      type="button"
+      aria-expanded="false"
+      class="accordion-trigger"
+      aria-controls="sect3"
+      id="accordion3id"
+    >
+      <!-- aria-expanded="false" → indica que el panel controlado está colapsado (oculto). -->
+      <!-- aria-controls="sect3" → asocia el botón con el tercer panel. -->
+      <!-- id="accordion3id" → se usa para enlazar con aria-labelledby. -->
+
+      <span class="accordion-title">
+        Shipping Address
+        <span class="accordion-icon"></span>
+      </span>
+    </button>
+  </h3>
+
+  <div
+    id="sect3"
+    role="region"
+    aria-labelledby="accordion3id"
+    class="accordion-panel"
+    hidden=""
+  >
+    <!-- role="region" → define el área del tercer panel como región accesible. -->
+    <!-- aria-labelledby="accordion3id" → vincula la región con el elemento que la titula. -->
+
+    <div>
+      <fieldset>
+        <p>
+          <label for="m-add1">Address 1:</label>
+          <input type="text" name="m-add1" id="m-add1" />
+        </p>
+        <p>
+          <label for="m-add2">Address 2:</label>
+          <input type="text" name="m-add2" id="m-add2" />
+        </p>
+        <p>
+          <label for="m-city">City:</label>
+          <input type="text" name="m-city" id="m-city" />
+        </p>
+        <p>
+          <label for="m-state">State:</label>
+          <input type="text" name="m-state" id="m-state" />
+        </p>
+        <p>
+          <label for="m-zip">Zip Code:</label>
+          <input type="text" name="m-zip" id="m-zip" />
+        </p>
+      </fieldset>
+    </div>
+  </div>
+</div>

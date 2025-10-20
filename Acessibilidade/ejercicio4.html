@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <title>Ejercicio 5 - Vídeo y contenido dinámico</title>
+  </head>
+
+  <body>
+    <video controls width="480" src="sample.mp4">
+      <track src="subtitulos.vtt" kind="subtitles" lang="es" label="español" />
+    </video>
+    <h2>Transcripción</h2>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem eum cum
+      reprehenderit doloribus aspernatur! Distinctio, iste. Cum accusamus
+      temporibus beatae?
+    </p>
+    <div id="mensajes" aria-live="polite">Mensajes aparecerán aquí</div>
+    <script>
+      const msg = document.getElementById('mensajes');
+      setInterval(() => {
+        const d = new Date();
+        msg.textContent = 'Mensaje nuevo a las ' + d.toLocaleTimeString();
+      }, 5000);
+    </script>
+  </body>
+</html>

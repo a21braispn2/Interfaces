@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Pochi — Oxygen X (Mockup)</title>
+    <style>
+      :root {
+        --accent: #0b76ff;
+        --muted: #6b7280;
+        --bg: #f7f7f8;
+        --card: #ffffff;
+        --maxw: 1100px;
+        --radius: 14px;
+        --glass: rgba(255, 255, 255, 0.6);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, 'Segoe UI',
+          Roboto, 'Helvetica Neue', Arial;
+        color: #111827;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        background: var(--bg);
+        line-height: 1.5;
+      }
+      .container {
+        max-width: var(--maxw);
+        margin: 40px auto;
+        padding: 0 20px;
+      }
+
+      /* Header */
+      header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 18px 0;
+      }
+      .brand {
+        display: flex;
+        gap: 12px;
+        align-items: center;
+      }
+      .logo {
+        width: 44px;
+        height: 44px;
+        border-radius: 10px;
+        background: linear-gradient(135deg, var(--accent), #7c3aed);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-weight: 700;
+      }
+      nav {
+        display: flex;
+        gap: 18px;
+        color: var(--muted);
+      }
+
+      /* Hero */
+      .hero {
+        display: grid;
+        grid-template-columns: 1fr 420px;
+        gap: 36px;
+        align-items: center;
+        background: linear-gradient(
+          180deg,
+          rgba(255, 255, 255, 0.9),
+          transparent
+        );
+        padding: 36px;
+        border-radius: var(--radius);
+      }
+      .kicker {
+        color: var(--muted);
+        font-weight: 600;
+      }
+      h1 {
+        margin: 6px 0 10px;
+        font-size: 40px;
+      }
+      p.lead {
+        color: var(--muted);
+        margin: 0 0 18px;
+      }
+      .cta-row {
+        display: flex;
+        gap: 12px;
+        align-items: center;
+      }
+      .btn {
+        background: var(--accent);
+        color: white;
+        padding: 12px 18px;
+        border-radius: 10px;
+        border: 0;
+        cursor: pointer;
+        font-weight: 600;
+      }
+      .btn.ghost {
+        background: transparent;
+        color: var(--accent);
+        border: 1px solid rgba(11, 118, 255, 0.12);
+      }
+      .hero-card {
+        background: linear-gradient(90deg, #0b1320, #0b2538);
+        color: white;
+        border-radius: 12px;
+        padding: 18px;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        height: 100%;
+      }
+      .phone-mock {
+        height: 320px;
+        border-radius: 12px;
+        background: conic-gradient(from 120deg, #111827, #0b2538, #1f2937);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      /* Feature band */
+      .band {
+        display: flex;
+        gap: 24px;
+        margin: 22px 0;
+      }
+      .band .item {
+        flex: 1;
+        background: var(--card);
+        padding: 18px;
+        border-radius: 12px;
+        box-shadow: 0 6px 18px rgba(15, 23, 42, 0.06);
+      }
+
+      /* Camera section */
+      .camera {
+        display: grid;
+        grid-template-columns: 1fr 420px;
+        gap: 24px;
+        align-items: center;
+        margin: 24px 0;
+      }
+      .camera .hero-img {
+        height: 260px;
+        border-radius: 12px;
+        background: linear-gradient(120deg, #0b1320, #0b2538);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+      }
+      .spec-list {
+        list-style: none;
+        padding: 0;
+        margin: 12px 0 0;
+      }
+      .spec-list li {
+        padding: 8px 0;
+        border-bottom: 1px dashed #eee;
+        color: var(--muted);
+      }
+
+      /* Specs */
+      .specs {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 18px;
+        margin: 20px 0;
+      }
+      .specs .box {
+        background: var(--card);
+        padding: 18px;
+        border-radius: 12px;
+      }
+      .specs table {
+        width: 100%;
+        border-collapse: collapse;
+      }
+      .specs th {
+        text-align: left;
+        color: var(--muted);
+        width: 40%;
+        padding: 8px;
+      }
+      .specs td {
+        padding: 8px;
+        font-weight: 600;
+      }
+
+      /* Testimonials */
+      .testimonials {
+        display: flex;
+        gap: 12px;
+        margin: 22px 0;
+      }
+      .testimonial {
+        flex: 1;
+        background: linear-gradient(180deg, #fff, #fbfbfd);
+        padding: 16px;
+        border-radius: 12px;
+        border: 1px solid #f1f1f6;
+      }
+
+      footer {
+        margin: 34px 0 80px;
+        color: var(--muted);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      /* Responsive */
+      @media (max-width: 980px) {
+        .hero,
+        .camera {
+          grid-template-columns: 1fr;
+        }
+        .hero {
+          padding: 20px;
+        }
+        .hero-card {
+          order: 2;
+        }
+        .hero .kicker {
+          font-size: 14px;
+        }
+      }
+      @media (max-width: 520px) {
+        h1 {
+          font-size: 28px;
+        }
+        .phone-mock {
+          height: 220px;
+        }
+        .container {
+          margin: 20px auto;
+          padding: 0 14px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <div class="brand">
+          <div class="logo">P</div>
+          <div>
+            <div style="font-weight: 700">Pochi</div>
+            <div style="font-size: 12px; color: var(--muted)">
+              Smart devices
+            </div>
+          </div>
+        </div>
+        <nav>
+          <div>Productos</div>
+          <div>Comunidad</div>
+          <div>Soporte</div>
+        </nav>
+      </header>
+
+      <!-- HERO -->
+      <section class="hero">
+        <div>
+          <div class="kicker">Oxygen OS 15</div>
+          <h1>Oxygen X — Rendimiento sin límites</h1>
+          <p class="lead">
+            El nuevo Oxygen X combina potencia de vanguardia con una pantalla
+            inmersiva y una cámara 8K para capturar la vida con detalle
+            profesional.
+          </p>
+          <div class="cta-row">
+            <button class="btn">Comprar ahora</button>
+            <button class="btn ghost">Reservar</button>
+          </div>
+
+          <div
+            style="display: flex; gap: 12px; margin-top: 18px; flex-wrap: wrap"
+          >
+            <div
+              style="
+                background: var(--card);
+                padding: 12px;
+                border-radius: 10px;
+                min-width: 160px;
+              "
+            >
+              6.9" QHD+ • 144 Hz
+            </div>
+            <div
+              style="
+                background: var(--card);
+                padding: 12px;
+                border-radius: 10px;
+                min-width: 160px;
+              "
+            >
+              200 MP • 8K@60fps
+            </div>
+            <div
+              style="
+                background: var(--card);
+                padding: 12px;
+                border-radius: 10px;
+                min-width: 160px;
+              "
+            >
+              6000 mAh • 120W
+            </div>
+          </div>
+        </div>
+
+        <aside class="hero-card">
+          <div
+            style="
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+            "
+          >
+            <div style="font-weight: 700">Oxygen X • Pro</div>
+            <div style="font-size: 13px; color: #9aa4b2">Desde $999</div>
+          </div>
+          <div class="phone-mock">[Mockup 3D del dispositivo]</div>
+          <div
+            style="
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+            "
+          >
+            <div style="font-size: 13px; color: var(--muted)">
+              Colores: Negro Cosmos • Azul Boreal • Blanco Perla
+            </div>
+            <div style="font-size: 12px; color: var(--muted)">
+              Envio en 24-48h
+            </div>
+          </div>
+        </aside>
+      </section>
+
+      <!-- Feature band -->
+      <div class="band">
+        <div class="item">
+          <strong>Rendimiento</strong>
+          <div style="color: var(--muted); margin-top: 6px">
+            Snapdragon 8 Gen 5 • 16 GB RAM • UFS 4.0
+          </div>
+        </div>
+        <div class="item">
+          <strong>Batería</strong>
+          <div style="color: var(--muted); margin-top: 6px">
+            6000 mAh • 120W rápido • 50W inalámbrico
+          </div>
+        </div>
+        <div class="item">
+          <strong>Seguridad</strong>
+          <div style="color: var(--muted); margin-top: 6px">
+            P-Secure chip • Huella ultrasónica • FaceID 3D
+          </div>
+        </div>
+      </div>
+
+      <!-- Camera section -->
+      <section class="camera">
+        <div>
+          <h2>Cámara 8K Ultra Vision</h2>
+          <p style="color: var(--muted); margin-top: 6px">
+            Sensor profesional para foto y vídeo con modos de IA que mejoran
+            colores, estabilización y rango dinámico.
+          </p>
+          <ul class="spec-list">
+            <li><strong>200 MP</strong> sensor principal con OIS</li>
+            <li><strong>8K a 60 fps</strong> con perfil LOG para edición</li>
+            <li><strong>Telefoto 5x</strong> óptico y ultra gran angular</li>
+            <li><strong>Modo noche</strong> multi-exposición</li>
+          </ul>
+        </div>
+        <div class="hero-img">[Imagen de lente / cámara]</div>
+      </section>
+
+      <!-- Display -->
+      <section style="margin: 18px 0">
+        <h2>Pantalla AMOLED QHD+</h2>
+        <p style="color: var(--muted)">
+          Colores reales y fluidez total para juegos y contenidos multimedia.
+        </p>
+
+        <div class="specs">
+          <div class="box">
+            <table>
+              <tr>
+                <th>Diagonal</th>
+                <td>6.9" (curved)</td>
+              </tr>
+              <tr>
+                <th>Resolución</th>
+                <td>3200 × 1440 (QHD+)</td>
+              </tr>
+              <tr>
+                <th>Tasa de refresco</th>
+                <td>144 Hz adaptativo</td>
+              </tr>
+              <tr>
+                <th>HDR</th>
+                <td>HDR10+ / Dolby Vision</td>
+              </tr>
+            </table>
+          </div>
+          <div class="box">
+            <h4 style="margin: 0 0 8px">Protección y extras</h4>
+            <p style="margin: 0; color: var(--muted)">
+              Gorilla Glass Armor 2 • Brillo máximo 1400 nits • Sensor de huella
+              ultrasónico
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Specs full -->
+      <section style="margin: 18px 0">
+        <h2>Especificaciones técnicas</h2>
+        <div
+          style="display: flex; gap: 12px; flex-wrap: wrap; margin-top: 12px"
+        >
+          <div
+            style="
+              flex: 1;
+              min-width: 260px;
+              background: var(--card);
+              padding: 14px;
+              border-radius: 12px;
+            "
+          >
+            <strong>Hardware</strong>
+            <ul
+              style="color: var(--muted); margin: 8px 0 0; padding-left: 18px"
+            >
+              <li>Snapdragon 8 Gen 5 • 3.2 GHz</li>
+              <li>16 GB LPDDR5X RAM</li>
+              <li>512 GB UFS 4.0</li>
+            </ul>
+          </div>
+          <div
+            style="
+              flex: 1;
+              min-width: 260px;
+              background: var(--card);
+              padding: 14px;
+              border-radius: 12px;
+            "
+          >
+            <strong>Batería & carga</strong>
+            <ul
+              style="color: var(--muted); margin: 8px 0 0; padding-left: 18px"
+            >
+              <li>6000 mAh</li>
+              <li>120W cable / 50W inalámbrico</li>
+              <li>Modo ahorro inteligente con IA</li>
+            </ul>
+          </div>
+          <div
+            style="
+              flex: 1;
+              min-width: 260px;
+              background: var(--card);
+              padding: 14px;
+              border-radius: 12px;
+            "
+          >
+            <strong>Conectividad</strong>
+            <ul
+              style="color: var(--muted); margin: 8px 0 0; padding-left: 18px"
+            >
+              <li>5G • WiFi 7 • Bluetooth 6.1</li>
+              <li>Dual SIM + eSIM</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Testimonials -->
+      <section>
+        <h2>Lo que dicen</h2>
+        <div class="testimonials">
+          <div class="testimonial">
+            <strong>Juan P.</strong>
+            <div style="color: var(--muted); margin-top: 8px">
+              "La batería dura dos días con uso mixto y la cámara es una locura.
+              Muy recomendable."
+            </div>
+          </div>
+          <div class="testimonial">
+            <strong>María S.</strong>
+            <div style="color: var(--muted); margin-top: 8px">
+              "Pantalla espectacular, perfecto para contenido HDR y juegos."
+            </div>
+          </div>
+          <div class="testimonial">
+            <strong>TechLab</strong>
+            <div style="color: var(--muted); margin-top: 8px">
+              "Rendimiento tope de gama, refrigeración eficiente y carga
+              ultrarrápida."
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <footer>
+        <div>© 2025 Pochi • Todos los derechos reservados</div>
+        <div style="display: flex; gap: 12px">
+          <div>Soporte</div>
+          <div>Garantía</div>
+          <div>Privacidad</div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

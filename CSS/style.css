@@ -1,0 +1,15 @@
+p {
+  padding: 10px;
+  width: 100vh;
+  margin: 10px;
+}
+p:nth-of-type(2) {
+  border-bottom: solid 1px red;
+}
+p:nth-of-type(3) {
+  border: solid 1px gray;
+  border-radius: 10px;
+}
+p:nth-of-type(4) {
+  border-left: solid 3px cornflowerblue;
+}

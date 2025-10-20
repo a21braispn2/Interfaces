@@ -1,0 +1,85 @@
+body {
+  display: flex;
+  justify-content: center;
+}
+
+section {
+  width: 600px;
+  height: 500px;
+  display: flex;
+}
+
+#mitad1 {
+  margin: 10px;
+  margin-right: 0%;
+  width: 60%;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+#mitad2 {
+  margin: 10px;
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  background-color: white;
+}
+
+#bloque1 {
+  width: 100%;
+  height: 49%;
+  background-color: aqua;
+}
+
+#bloque3 {
+  width: 100%;
+  height: 49%;
+  display: flex;
+}
+
+#bloque2 {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+#rojo {
+  width: 100%;
+  height: 28%;
+  background-color: red;
+}
+
+#naranja {
+  width: 100%;
+  height: 67%;
+  background-color: orange;
+}
+
+#rosa {
+  margin-left: 10px;
+  width: 60%;
+  background-color: magenta;
+}
+
+#verde {
+  width: 100%;
+  height: 25%;
+  background-color: green;
+}
+
+#azul {
+  width: 100%;
+  height: 58%;
+  background-color: blue;
+}
+
+#marron {
+  width: 100%;
+  height: 13%;
+  background-color: goldenrod;
+}
