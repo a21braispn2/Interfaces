@@ -1,0 +1,46 @@
+html,
+body {
+  padding: 0%;
+  margin: 0%;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+main {
+  display: flex;
+}
+/* ------------------- */
+
+#info {
+  margin-top: 5%;
+  margin-left: 10%;
+  width: 20%;
+  background-color: black;
+  color: white;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 0 20px black;
+}
+
+h5,
+h3 {
+  padding: 0%;
+  margin: 0%;
+}
+
+p {
+  padding: 0%;
+  margin: 0%;
+}
+
+/* ------------------- */
+
+#form {
+  margin-top: 5%;
+  margin-left: 10%;
+  width: 30%;
+  background-color: black;
+  color: white;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 0 20px black;
+}
