@@ -30,26 +30,63 @@
         </small>
       </section>
       <section id="form">
-        <h3>Envíanos un mensaje</h3>
+        <h4>Envíanos un mensaje</h4>
+        <br />
         <form action="post">
-          <label for="name">Nombre</label>
-          <input type="text" name="name" id="name" />
-          <label for="email">Correo electrónico</label>
-          <input type="text" name="email" id="email" />
-          <label for="phone">Teléfono</label>
-          <input type="tel" name="phone" id="phone" />
-          <label for="resum">Asunto</label>
-          <input type="text" name="resum" id="resum" />
-          <label for="message">Mensaje</label>
-          <input type="text" name="message" id="message" />
-          <label for="reason">Motivo</label>
-          <select name="reason" id="reason">
-            <option value="1">Consulta general</option>
-            <option value="2">Otro</option>
-          </select>
-          <input type="submit" value="Enviar mensaje" />
-          <input type="reset" value="Limpiar" />
-          <p>*Campos obligatorios</p>
+          <section>
+            <div>
+              <label for="name">Nombre</label>
+              <input type="text" name="name" id="name" value="Tu nombre" />
+            </div>
+            <div>
+              <label for="email">Correo electrónico</label>
+              <input
+                type="text"
+                name="email"
+                id="email"
+                value="tu@ejemplo.com"
+              />
+            </div>
+            <div>
+              <label for="phone">Teléfono</label>
+              <input
+                type="tel"
+                name="phone"
+                id="phone"
+                value="+34 600 123 456"
+              />
+            </div>
+          </section>
+
+          <section>
+            <label for="resum">Asunto</label>
+            <input type="text" name="resum" id="resum" value="Breve resumen" />
+          </section>
+
+          <section>
+            <label for="message">Mensaje</label>
+            <textarea
+              name="message"
+              id="message"
+              placeholder="Cuéntanos lo que necesites"
+            ></textarea>
+          </section>
+
+          <section>
+            <label for="reason">Motivo</label>
+            <select name="reason" id="reason">
+              <option value="1">Consulta general</option>
+              <option value="2">Otro</option>
+            </select>
+          </section>
+
+          <section>
+            <div id="botones">
+              <input type="submit" id="submit" value="Enviar mensaje" />
+              <input type="reset" id="reset" value="Limpiar" />
+            </div>
+            <p>*Campos obligatorios</p>
+          </section>
         </form>
       </section>
     </main>

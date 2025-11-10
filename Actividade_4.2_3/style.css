@@ -7,27 +7,32 @@ body {
 
 main {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 100px;
 }
 /* ------------------- */
 
 #info {
   margin-top: 5%;
-  margin-left: 10%;
   width: 20%;
+  height: fit-content;
   background-color: black;
   color: white;
   padding: 20px;
   border-radius: 20px;
   box-shadow: 0 0 20px black;
+  flex: 0 1 300px;
 }
 
-h5,
+#info h5,
+h4,
 h3 {
   padding: 0%;
   margin: 0%;
 }
 
-p {
+#info p {
   padding: 0%;
   margin: 0%;
 }
@@ -36,11 +41,129 @@ p {
 
 #form {
   margin-top: 5%;
-  margin-left: 10%;
   width: 30%;
   background-color: black;
   color: white;
   padding: 20px;
   border-radius: 20px;
   box-shadow: 0 0 20px black;
+  flex: 0 1 500px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+#form h4 {
+  padding: 0px;
+  margin: 0%;
+}
+
+#form section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+#form section:nth-child(1) {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+#form section:nth-child(1) input {
+  width: 85%;
+}
+
+#form section:nth-last-child(1) {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  text-align: center;
+}
+
+#form section:nth-last-child(1) p {
+  margin: 0%;
+  font-size: 12px;
+}
+
+#form section:nth-last-child(1) div {
+  margin: 0%;
+  font-size: 12px;
+  width: auto;
+}
+
+#form label {
+  padding-bottom: 10px;
+  font-size: 13px;
+}
+
+#form div {
+  display: flex;
+  flex-direction: column;
+  width: 33%;
+}
+
+#form div input {
+  width: 70%;
+}
+
+#form input {
+  background-color: black;
+  border: solid white 1px;
+  border-radius: 10px;
+  height: 30px;
+  color: grey;
+  padding-left: 10px;
+  margin-bottom: 10px;
+}
+
+#form select {
+  background-color: black;
+  border: solid white 1px;
+  border-radius: 10px;
+  height: 30px;
+  color: white;
+  padding-left: 10px;
+  margin-bottom: 20px;
+}
+
+#form #submit {
+  background-color: rgb(103, 61, 219);
+  border: 0px;
+  text-align: center;
+  padding: 5px;
+  color: black;
+  font-weight: bold;
+  margin: 0px;
+  margin-right: 10px;
+}
+
+#form #reset {
+  text-align: center;
+  padding: 5px;
+  color: white;
+  font-weight: bold;
+  margin: 0px;
+  margin-right: 10px;
+}
+
+#form #botones {
+  display: flex;
+  flex-direction: row;
+}
+
+#form textarea {
+  background-color: black;
+  border: solid white 1px;
+  border-radius: 10px;
+  height: 30px;
+  color: rgb(255, 255, 255);
+  padding-left: 10px;
+  margin-bottom: 10px;
+  height: 100px;
+  padding: 10px;
 }
